@@ -1,0 +1,40 @@
+Asunto: [Formación] Gracias por participar en el ejercicio de concientización anti-phishing — {{ORG_NAME}}
+
+Hola {{NOMBRE_USUARIO}},
+
+Hace unos momentos interactuaste con un correo y un portal de inicio de sesión que formaban parte de una SIMULACIÓN INTERNA Y AUTORIZADA de concientización en ciberseguridad de {{ORG_NAME}} (Campaña {{CAMPAIGN_ID}}).
+
+TU INFORMACIÓN ESTÁ PROTEGIDA
+------------------------------
+- Este ejercicio es 100% pedagógico y no tiene carácter sancionatorio.
+- NO se capturó, transmitió ni almacenó ninguna contraseña en texto claro.
+- Solo se registró un indicador mínimo y pseudonimizado de interacción para activar este mensaje formativo y evaluar necesidades de capacitación.
+
+SEÑALES DE ALERTA PRESENTES EN ESTA SIMULACIÓN
+----------------------------------------------
+1. Dominio lookalike del remitente: soporte-verificacion@andescorp-ti.local en vez del dominio oficial @andescorp.local.
+2. Urgencia artificial: advertencia de suspensión de cuenta en menos de 2 horas.
+3. URL diferente al portal legítimo: el enlace llevaba a un portal distinto a sso.andescorp.local.
+4. Solicitud inusual de credenciales mediante enlace en correo electrónico.
+
+REGLA P.A.R.A. PARA PREVENIR PHISHING
+-------------------------------------
+- PAUSA: Desconfía de correos urgentes o alarmistas.
+- ANALIZA: Revisa el remitente exacto y la URL real antes de hacer clic.
+- REPORTA: Remite correos sospechosos a {{CSIRT_EMAIL}} ({{CSIRT_EXTENSION}}).
+- APRENDE: Usa marcadores oficiales, gestor de contraseñas y MFA.
+
+¿QUÉ HACER ANTE UN INCIDENTE REAL?
+----------------------------------
+1. No respondas al correo ni abras adjuntos.
+2. Reporta de inmediato a {{CSIRT_EMAIL}} o a la {{CSIRT_EXTENSION}}.
+3. Si sospechas haber entregado credenciales reales, cambia tu contraseña inmediatamente en el portal oficial ({{PORTAL_LEGITIMO_URL}}) y solicita al CSIRT la revocación de sesiones.
+
+RECURSOS DE FORMACIÓN
+---------------------
+- Infografía y Checklist Anti-Phishing: {{INFOGRAFIA_URL}}
+- Portal SSO Oficial de {{ORG_NAME}}: {{PORTAL_LEGITIMO_URL}}
+
+Atentamente,
+Dirección de Recursos Humanos y Seguridad de la Información
+{{ORG_NAME}} (Entorno controlado de laboratorio)

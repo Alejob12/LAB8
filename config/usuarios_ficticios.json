@@ -1,0 +1,58 @@
+[
+  {
+    "id": "EMP-001",
+    "nombre": "Ana María Gómez",
+    "email": "ana.gomez@andescorp.local",
+    "departamento": "Finanzas",
+    "cargo": "Analista Contable Senior"
+  },
+  {
+    "id": "EMP-002",
+    "nombre": "Carlos Eduardo Ruiz",
+    "email": "carlos.ruiz@andescorp.local",
+    "departamento": "Operaciones",
+    "cargo": "Coordinador de Logística"
+  },
+  {
+    "id": "EMP-003",
+    "nombre": "Laura Valentina Martínez",
+    "email": "laura.martinez@andescorp.local",
+    "departamento": "Recursos Humanos",
+    "cargo": "Especialista de Talento"
+  },
+  {
+    "id": "EMP-004",
+    "nombre": "Diego Alejandro Torres",
+    "email": "diego.torres@andescorp.local",
+    "departamento": "Comercial",
+    "cargo": "Ejecutivo de Cuentas"
+  },
+  {
+    "id": "EMP-005",
+    "nombre": "Sofía Alejandra Castro",
+    "email": "sofia.castro@andescorp.local",
+    "departamento": "Tecnología",
+    "cargo": "Ingeniera de Soporte"
+  },
+  {
+    "id": "EMP-006",
+    "nombre": "Andrés Felipe Morales",
+    "email": "andres.morales@andescorp.local",
+    "departamento": "Finanzas",
+    "cargo": "Tesorero Corporativo"
+  },
+  {
+    "id": "EMP-007",
+    "nombre": "Camila Andrea Herrera",
+    "email": "camila.herrera@andescorp.local",
+    "departamento": "Legal y Cumplimiento",
+    "cargo": "Abogada Corporativa"
+  },
+  {
+    "id": "EMP-008",
+    "nombre": "Julián David Mendoza",
+    "email": "julian.mendoza@andescorp.local",
+    "departamento": "Operaciones",
+    "cargo": "Analista de Procesos"
+  }
+]

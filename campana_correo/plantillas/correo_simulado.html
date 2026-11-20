@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acción Requerida: Verificación de Credenciales Corporativas</title>
+</head>
+<body style="margin:0;padding:0;background-color:#f1f5f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#0f172a;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:24px 14px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="620" cellspacing="0" cellpadding="0" style="background:#ffffff;border-radius:10px;overflow:hidden;border:1px solid #cbd5e1;box-shadow:0 6px 18px rgba(15,23,42,0.06);">
+          <!-- Encabezado con apariencia corporativa -->
+          <tr>
+            <td style="background:#0f2942;padding:22px 30px;color:#ffffff;border-bottom:4px solid #d97706;">
+              <div style="font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#fbbf24;font-weight:700;">
+                Mesa de Ayuda TI · AndesCorp S.A.
+              </div>
+              <h1 style="margin:8px 0 0;font-size:20px;font-weight:700;line-height:1.3;">
+                [URGENTE] Actualización del Certificado de Seguridad SSO
+              </h1>
+            </td>
+          </tr>
+
+          <!-- Alerta de Urgencia Simulada -->
+          <tr>
+            <td style="background:#fef2f2;border-bottom:1px solid #fee2e2;padding:12px 30px;color:#991b1b;font-size:13px;font-weight:600;">
+              ⚠️ Plazo límite de validación: Menos de 2 horas para evitar la suspensión temporal del acceso corporativo.
+            </td>
+          </tr>
+
+          <!-- Cuerpo del correo -->
+          <tr>
+            <td style="padding:28px 30px;font-size:14.5px;line-height:1.6;color:#334155;">
+              <p style="margin:0 0 16px;">Estimado(a) <strong>{{NOMBRE_USUARIO}}</strong>,</p>
+
+              <p style="margin:0 0 16px;">
+                Como parte de la migración de seguridad en la infraestructura de autenticación centralizada (Single Sign-On) de <strong>{{ORG_NAME}}</strong>, requerimos que todos los colaboradores del departamento de <strong>{{DEPARTAMENTO}}</strong> validen su identidad y certifiquen sus credenciales activas.
+              </p>
+
+              <p style="margin:0 0 20px;">
+                Si no completa esta verificación antes del cierre de la ventana operativa de hoy, su acceso a la intranet, correo y aplicaciones corporativas será suspendido temporalmente por políticas de conformidad.
+              </p>
+
+              <!-- Botón simulado con URL trampa -->
+              <div style="text-align:center;margin:30px 0;">
+                <a href="{{EVIL_TWIN_LINK}}" target="_blank" style="display:inline-block;background:#0f2942;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:14px 28px;border-radius:8px;border:1px solid #1e3a5f;box-shadow:0 4px 10px rgba(15,41,66,0.2);">
+                  Verificar Credenciales SSO Ahora &rarr;
+                </a>
+              </div>
+
+              <div style="background:#f8fafc;border:1px dashed #cbd5e1;padding:12px 16px;border-radius:6px;font-size:12px;color:#64748b;margin-bottom:20px;">
+                <strong>Nota técnica de TI:</strong> Enlace exclusivo para la cuenta <code>{{CORREO_DESTINO}}</code>. No comparta este vínculo con otros miembros del equipo.
+              </div>
+
+              <p style="margin:0;font-size:13px;color:#64748b;">
+                Atentamente,<br>
+                <strong>Mesa de Ayuda TI & Centro de Soporte Tecnológico</strong><br>
+                {{ORG_NAME}} (soporte-verificacion@andescorp-ti.local)
+              </p>
+            </td>
+          </tr>
+
+          <!-- Pie del correo con aviso de entorno controlado -->
+          <tr>
+            <td style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:14px 30px;font-size:11.5px;color:#94a3b8;text-align:center;">
+              Mensaje interno generado en entorno de simulación didáctica de laboratorio · {{ORG_DOMAIN}}
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

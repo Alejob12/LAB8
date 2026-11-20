@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificación Requerida — SSO {{ org_name }}</title>
+  <style>
+    :root {
+      --navy: #0f2942;
+      --navy-2: #1e3a5f;
+      --gold: #d97706;
+      --red: #b91c1c;
+      --bg: #eef2f7;
+      --card: #ffffff;
+      --border: #cbd5e1;
+      --text: #0f172a;
+      --muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(160deg, #f1f5f9 0%, #e2e8f0 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Barra simulada de dirección del navegador con indicación visual didáctica */
+    .address-bar {
+      background: #1e293b;
+      color: #f1f5f9;
+      padding: 10px 24px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-bottom: 3px solid #f59e0b;
+    }
+    .url-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0f172a;
+      border: 1px solid #f59e0b;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: #fef08a;
+      font-size: 12.5px;
+    }
+    .lookalike-tag {
+      background: #b45309;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-left: 12px;
+      font-size: 12.5px;
+      padding: 4px 10px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+    }
+    .nav-links a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+    .urgent-banner {
+      max-width: 460px;
+      width: 100%;
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      border-left: 5px solid var(--red);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 18px;
+      color: #991b1b;
+      font-size: 13px;
+      line-height: 1.5;
+      box-shadow: 0 4px 12px rgba(185, 28, 28, 0.08);
+    }
+    .card {
+      width: 100%;
+      max-width: 460px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(15, 41, 66, 0.12);
+    }
+    .card-top {
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: #fff;
+      padding: 26px 28px;
+      text-align: center;
+      border-bottom: 4px solid var(--gold);
+    }
+    .logo-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(251, 191, 36, 0.5);
+      color: #fbbf24;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .card-top h1 { font-size: 22px; margin-bottom: 4px; }
+    .card-top p { font-size: 13px; color: #cbd5e1; }
+    .card-body { padding: 26px 28px; }
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 11px 13px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 16px;
+      outline: none;
+    }
+    input:focus { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(15, 41, 66, 0.12); }
+    button {
+      width: 100%;
+      background: var(--navy);
+      color: #fff;
+      border: 0;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(15, 41, 66, 0.2);
+    }
+    button:hover { background: #1e3a5f; }
+    .footer-help {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .privacy-notice {
+      margin-top: 22px;
+      padding: 10px 14px;
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+      font-size: 11.5px;
+      color: #64748b;
+      line-height: 1.45;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de dirección simulada -->
+  <div class="address-bar">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span class="url-pill">
+        🔒 http://{{ display_host }}:{{ port }}/login
+      </span>
+      <span class="lookalike-tag">Dominio Simulado (Lookalike)</span>
+    </div>
+    <div class="nav-links">
+      <a href="{{ webmail_url }}" target="_blank">Webmail Simulado</a>
+      <a href="{{ dashboard_url }}" target="_blank">Dashboard Telemetría</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Alerta de urgencia (Bandera roja #2) -->
+    <div class="urgent-banner">
+      <strong>⚠️ Validación de Identidad Obligatoria:</strong><br>
+      Su cuenta corporativa presenta una solicitud de renovación de credenciales. Ingrese su usuario y contraseña para certificar el acceso antes del vencimiento.
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <div class="logo-badge">Servicio de Autenticación Centralizada</div>
+        <h1>{{ org_name }}</h1>
+        <p>Portal Unificado de Acceso Corporativo (SSO)</p>
+      </div>
+
+      <div class="card-body">
+        <form method="POST" action="/login{% if token %}?t={{ token }}{% endif %}">
+          <input type="hidden" name="token" value="{{ token or '' }}">
+
+          <label for="email">Correo Electrónico Corporativo</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="usuario@{{ org_domain }}"
+            value="{{ user_email or '' }}"
+            required
+            autocomplete="off"
+          >
+
+          <label for="password">Contraseña Corporativa</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••••••"
+            required
+            autocomplete="off"
+          >
+
+          <button type="submit">Validar Identidad y Continuar &rarr;</button>
+        </form>
+
+        <div class="footer-help">
+          Mesa de Ayuda TI · {{ csirt_email }} ({{ csirt_extension }})
+        </div>
+
+        <div class="privacy-notice">
+          🛡️ <strong>Garantía de Privacidad por Diseño (Laboratorio 8):</strong><br>
+          Este formulario es estrictamente ficticio y educativo. Cualquier contraseña ingresada es <strong>descartada al instante en memoria</strong> sin almacenarse ni loguearse.
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

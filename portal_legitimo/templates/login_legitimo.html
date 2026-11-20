@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal SSO Oficial — {{ org_name }}</title>
+  <style>
+    :root {
+      --navy: #0f2942;
+      --navy-2: #1e3a5f;
+      --gold: #d97706;
+      --green: #15803d;
+      --bg: #eef2f7;
+      --card: #ffffff;
+      --border: #cbd5e1;
+      --text: #0f172a;
+      --muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(160deg, #e2e8f0 0%, #f8fafc 60%, #e0f2fe 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .address-bar {
+      background: #0b1f33;
+      color: #e2e8f0;
+      padding: 10px 24px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-bottom: 3px solid #16a34a;
+    }
+    .url-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #132e4a;
+      border: 1px solid #22c55e;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: #bbf7d0;
+      font-size: 12.5px;
+    }
+    .verified-tag {
+      background: #16a34a;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-left: 12px;
+      font-size: 12.5px;
+      padding: 4px 10px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+    }
+    .nav-links a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+    .redirect-banner {
+      max-width: 460px;
+      width: 100%;
+      background: #ecfdf5;
+      border: 1px solid #86efac;
+      border-left: 5px solid #16a34a;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 18px;
+      color: #14532d;
+      font-size: 13.5px;
+      line-height: 1.5;
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.08);
+    }
+    .card {
+      width: 100%;
+      max-width: 460px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(15, 41, 66, 0.12);
+    }
+    .card-top {
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: #fff;
+      padding: 26px 28px;
+      text-align: center;
+      border-bottom: 4px solid var(--gold);
+    }
+    .logo-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(251, 191, 36, 0.5);
+      color: #fbbf24;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .card-top h1 { font-size: 22px; margin-bottom: 4px; }
+    .card-top p { font-size: 13px; color: #cbd5e1; }
+    .card-body { padding: 26px 28px; }
+    .trust-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12.5px;
+      color: #166534;
+      margin-bottom: 18px;
+    }
+    .error-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #991b1b;
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 11px 13px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 16px;
+      outline: none;
+    }
+    input:focus { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(15, 41, 66, 0.12); }
+    button {
+      width: 100%;
+      background: var(--navy);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { background: var(--navy-2); }
+    .resources {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 12.5px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .resources a { color: var(--navy); font-weight: 600; text-decoration: none; }
+    .resources a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="address-bar">
+    <div class="url-pill">
+      <span class="verified-tag">PORTAL OFICIAL</span>
+      <span>https://{{ display_host }}/login</span>
+    </div>
+    <div class="nav-links">
+      <a href="/materiales/infografia-antiphishing.html" target="_blank">Infografía Anti-Phishing</a>
+      <a href="{{ webmail_url }}" target="_blank">Webmail Interno</a>
+      <a href="{{ dashboard_url }}" target="_blank">Dashboard Lab 8</a>
+    </div>
+  </div>
+
+  <main>
+    {% if from_simulation %}
+    <div class="redirect-banner">
+      <strong>Redirección completada con éxito.</strong><br>
+      Ahora te encuentras en el <strong>Portal SSO Oficial de {{ org_name }}</strong>
+      (<code>{{ display_host }}</code>). Recuerda acceder siempre desde tus marcadores corporativos
+      y revisar el correo de formación enviado a tu buzón.
+    </div>
+    {% endif %}
+
+    <section class="card">
+      <div class="card-top">
+        <div class="logo-badge">Identidad Corporativa Verificada</div>
+        <h1>{{ org_name }} — SSO</h1>
+        <p>Acceso Único Oficial · Dominio <strong>{{ display_host }}</strong></p>
+      </div>
+      <div class="card-body">
+        <div class="trust-box">
+          <strong>Entorno oficial simulado:</strong> Dominio verificado <code>{{ display_host }}</code>.
+          Nunca ingreses tu contraseña en sitios con dominios distintos a <code>*.{{ org_domain }}</code>.
+        </div>
+
+        {% if error_msg %}
+        <div class="error-box">{{ error_msg }}</div>
+        {% endif %}
+
+        <form method="POST" action="/login">
+          <label for="email">Correo Corporativo</label>
+          <input id="email" name="email" type="email" required placeholder="usuario@{{ org_domain }}" autocomplete="username">
+
+          <label for="demo_secret">Contraseña Corporativa (demo ficticia)</label>
+          <input id="demo_secret" name="demo_secret" type="password" required placeholder="••••••••••••" autocomplete="current-password">
+
+          <button type="submit">Iniciar Sesión en SSO Oficial</button>
+        </form>
+
+        <div class="resources">
+          <a href="/materiales/infografia-antiphishing.html" target="_blank">Ver Infografía RR.HH.</a>
+          <span>Soporte CSIRT: <code>{{ csirt_email }}</code> ({{ csirt_extension }})</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    {{ org_name }} · Laboratorio Académico de Concientización (Entorno 100% ficticio y local).
+  </footer>
+</body>
+</html>

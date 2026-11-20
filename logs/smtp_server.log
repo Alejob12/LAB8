@@ -1,0 +1,80 @@
+[2026-11-20T00:53:37Z] [INFO] SMTP_SERVER_STARTED listen=127.0.0.1:1025 allowed_domain=@andescorp.local
+[2026-11-20T00:53:43Z] [INFO] CONN_OPEN peer=127.0.0.1:61874
+[2026-11-20T00:53:43Z] [INFO] EHLO peer=127.0.0.1:61874 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:43Z] [INFO] MAIL_FROM peer=127.0.0.1:61874 sender=soporte-verificacion@andescorp-ti.local
+[2026-11-20T00:53:43Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61874 rcpt=ana.gomez@andescorp.local
+[2026-11-20T00:53:43Z] [INFO] DELIVERED peer=127.0.0.1:61874 from=soporte-verificacion@andescorp-ti.local to=ana.gomez@andescorp.local bytes=6517 msg_id=<cf9d6d2936c64dcab19f3c8f87136c6d@mail.andescorp.local>
+[2026-11-20T00:53:43Z] [INFO] CONN_CLOSE peer=127.0.0.1:61874
+[2026-11-20T00:53:43Z] [INFO] CONN_OPEN peer=127.0.0.1:61875
+[2026-11-20T00:53:43Z] [INFO] EHLO peer=127.0.0.1:61875 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:43Z] [INFO] MAIL_FROM peer=127.0.0.1:61875 sender=soporte-verificacion@andescorp-ti.local
+[2026-11-20T00:53:43Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61875 rcpt=carlos.ruiz@andescorp.local
+[2026-11-20T00:53:43Z] [INFO] DELIVERED peer=127.0.0.1:61875 from=soporte-verificacion@andescorp-ti.local to=carlos.ruiz@andescorp.local bytes=6517 msg_id=<050377cc3caf4428bb3967dd4c78d89c@mail.andescorp.local>
+[2026-11-20T00:53:43Z] [INFO] CONN_CLOSE peer=127.0.0.1:61875
+[2026-11-20T00:53:43Z] [INFO] CONN_OPEN peer=127.0.0.1:61876
+[2026-11-20T00:53:43Z] [INFO] EHLO peer=127.0.0.1:61876 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:43Z] [INFO] MAIL_FROM peer=127.0.0.1:61876 sender=soporte-verificacion@andescorp-ti.local
+[2026-11-20T00:53:43Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61876 rcpt=laura.martinez@andescorp.local
+[2026-11-20T00:53:43Z] [INFO] DELIVERED peer=127.0.0.1:61876 from=soporte-verificacion@andescorp-ti.local to=laura.martinez@andescorp.local bytes=6556 msg_id=<26a6bc9e81834eb4b005bdb080e9e096@mail.andescorp.local>
+[2026-11-20T00:53:43Z] [INFO] CONN_CLOSE peer=127.0.0.1:61876
+[2026-11-20T00:53:43Z] [INFO] CONN_OPEN peer=127.0.0.1:61877
+[2026-11-20T00:53:43Z] [INFO] EHLO peer=127.0.0.1:61877 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:43Z] [INFO] MAIL_FROM peer=127.0.0.1:61877 sender=soporte-verificacion@andescorp-ti.local
+[2026-11-20T00:53:43Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61877 rcpt=diego.torres@andescorp.local
+[2026-11-20T00:53:43Z] [INFO] DELIVERED peer=127.0.0.1:61877 from=soporte-verificacion@andescorp-ti.local to=diego.torres@andescorp.local bytes=6522 msg_id=<821834e0e9c54c38a4776cfcd0d381d5@mail.andescorp.local>
+[2026-11-20T00:53:43Z] [INFO] CONN_CLOSE peer=127.0.0.1:61877
+[2026-11-20T00:53:43Z] [INFO] CONN_OPEN peer=127.0.0.1:61878
+[2026-11-20T00:53:43Z] [INFO] EHLO peer=127.0.0.1:61878 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:43Z] [INFO] MAIL_FROM peer=127.0.0.1:61878 sender=soporte-verificacion@andescorp-ti.local
+[2026-11-20T00:53:43Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61878 rcpt=sofia.castro@andescorp.local
+[2026-11-20T00:53:43Z] [INFO] DELIVERED peer=127.0.0.1:61878 from=soporte-verificacion@andescorp-ti.local to=sofia.castro@andescorp.local bytes=6544 msg_id=<d4c902a1849644d1b833700c270eae84@mail.andescorp.local>
+[2026-11-20T00:53:43Z] [INFO] CONN_CLOSE peer=127.0.0.1:61878
+[2026-11-20T00:53:43Z] [INFO] CONN_OPEN peer=127.0.0.1:61879
+[2026-11-20T00:53:43Z] [INFO] EHLO peer=127.0.0.1:61879 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:43Z] [INFO] MAIL_FROM peer=127.0.0.1:61879 sender=soporte-verificacion@andescorp-ti.local
+[2026-11-20T00:53:43Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61879 rcpt=andres.morales@andescorp.local
+[2026-11-20T00:53:43Z] [INFO] DELIVERED peer=127.0.0.1:61879 from=soporte-verificacion@andescorp-ti.local to=andres.morales@andescorp.local bytes=6534 msg_id=<f6fbdee9246b4b5caf9c501e4503dd39@mail.andescorp.local>
+[2026-11-20T00:53:43Z] [INFO] CONN_CLOSE peer=127.0.0.1:61879
+[2026-11-20T00:53:43Z] [INFO] CONN_OPEN peer=127.0.0.1:61880
+[2026-11-20T00:53:43Z] [INFO] EHLO peer=127.0.0.1:61880 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:43Z] [INFO] MAIL_FROM peer=127.0.0.1:61880 sender=soporte-verificacion@andescorp-ti.local
+[2026-11-20T00:53:43Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61880 rcpt=camila.herrera@andescorp.local
+[2026-11-20T00:53:43Z] [INFO] DELIVERED peer=127.0.0.1:61880 from=soporte-verificacion@andescorp-ti.local to=camila.herrera@andescorp.local bytes=6548 msg_id=<11622406aed54dff826ef214881ef77f@mail.andescorp.local>
+[2026-11-20T00:53:43Z] [INFO] CONN_CLOSE peer=127.0.0.1:61880
+[2026-11-20T00:53:43Z] [INFO] CONN_OPEN peer=127.0.0.1:61881
+[2026-11-20T00:53:43Z] [INFO] EHLO peer=127.0.0.1:61881 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:43Z] [INFO] MAIL_FROM peer=127.0.0.1:61881 sender=soporte-verificacion@andescorp-ti.local
+[2026-11-20T00:53:43Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61881 rcpt=julian.mendoza@andescorp.local
+[2026-11-20T00:53:43Z] [INFO] DELIVERED peer=127.0.0.1:61881 from=soporte-verificacion@andescorp-ti.local to=julian.mendoza@andescorp.local bytes=6538 msg_id=<cef33c13622941c6986f0edc71ad6dcf@mail.andescorp.local>
+[2026-11-20T00:53:43Z] [INFO] CONN_CLOSE peer=127.0.0.1:61881
+[2026-11-20T00:53:54Z] [INFO] CONN_OPEN peer=127.0.0.1:61885
+[2026-11-20T00:53:54Z] [INFO] EHLO peer=127.0.0.1:61885 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:54Z] [INFO] MAIL_FROM peer=127.0.0.1:61885 sender=concientizacion@andescorp.local
+[2026-11-20T00:53:54Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61885 rcpt=ana.gomez@andescorp.local
+[2026-11-20T00:53:54Z] [INFO] DELIVERED peer=127.0.0.1:61885 from=concientizacion@andescorp.local to=ana.gomez@andescorp.local bytes=12341 msg_id=<1c60bf91209e435aadecb91941e6e3b3@mail.andescorp.local>
+[2026-11-20T00:53:54Z] [INFO] CONN_CLOSE peer=127.0.0.1:61885
+[2026-11-20T00:53:54Z] [INFO] CONN_OPEN peer=127.0.0.1:61892
+[2026-11-20T00:53:54Z] [INFO] EHLO peer=127.0.0.1:61892 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:54Z] [INFO] MAIL_FROM peer=127.0.0.1:61892 sender=concientizacion@andescorp.local
+[2026-11-20T00:53:54Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61892 rcpt=laura.martinez@andescorp.local
+[2026-11-20T00:53:54Z] [INFO] DELIVERED peer=127.0.0.1:61892 from=concientizacion@andescorp.local to=laura.martinez@andescorp.local bytes=12354 msg_id=<d3b6e4f6f08d40a0b7cb79821d6ecb2d@mail.andescorp.local>
+[2026-11-20T00:53:54Z] [INFO] CONN_CLOSE peer=127.0.0.1:61892
+[2026-11-20T00:53:54Z] [INFO] CONN_OPEN peer=127.0.0.1:61898
+[2026-11-20T00:53:54Z] [INFO] EHLO peer=127.0.0.1:61898 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:54Z] [INFO] MAIL_FROM peer=127.0.0.1:61898 sender=concientizacion@andescorp.local
+[2026-11-20T00:53:54Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61898 rcpt=sofia.castro@andescorp.local
+[2026-11-20T00:53:54Z] [INFO] DELIVERED peer=127.0.0.1:61898 from=concientizacion@andescorp.local to=sofia.castro@andescorp.local bytes=12348 msg_id=<62f3016d888d49a8a3b8fbdac04d5a05@mail.andescorp.local>
+[2026-11-20T00:53:54Z] [INFO] CONN_CLOSE peer=127.0.0.1:61898
+[2026-11-20T00:53:54Z] [INFO] CONN_OPEN peer=127.0.0.1:61904
+[2026-11-20T00:53:54Z] [INFO] EHLO peer=127.0.0.1:61904 helo=dispatcher.andescorp.local
+[2026-11-20T00:53:54Z] [INFO] MAIL_FROM peer=127.0.0.1:61904 sender=concientizacion@andescorp.local
+[2026-11-20T00:53:54Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61904 rcpt=camila.herrera@andescorp.local
+[2026-11-20T00:53:54Z] [INFO] DELIVERED peer=127.0.0.1:61904 from=concientizacion@andescorp.local to=camila.herrera@andescorp.local bytes=12338 msg_id=<832d1808e5014675b5b5b0764797002d@mail.andescorp.local>
+[2026-11-20T00:53:54Z] [INFO] CONN_CLOSE peer=127.0.0.1:61904
+[2026-11-20T00:57:45Z] [INFO] CONN_OPEN peer=127.0.0.1:61984
+[2026-11-20T00:57:45Z] [INFO] EHLO peer=127.0.0.1:61984 helo=dispatcher.andescorp.local
+[2026-11-20T00:57:45Z] [INFO] MAIL_FROM peer=127.0.0.1:61984 sender=concientizacion@andescorp.local
+[2026-11-20T00:57:45Z] [INFO] RCPT_ACCEPTED peer=127.0.0.1:61984 rcpt=ana.gomez@andescorp.local
+[2026-11-20T00:57:45Z] [INFO] DELIVERED peer=127.0.0.1:61984 from=concientizacion@andescorp.local to=ana.gomez@andescorp.local bytes=12319 msg_id=<836fab5841df44e3a63836cbc217f91d@mail.andescorp.local>
+[2026-11-20T00:57:45Z] [INFO] CONN_CLOSE peer=127.0.0.1:61984
+[2026-11-20T00:59:10Z] [INFO] SMTP_SERVER_STARTED listen=127.0.0.1:1025 allowed_domain=@andescorp.local

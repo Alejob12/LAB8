@@ -1,0 +1,18 @@
+Asunto: [URGENTE] Actualización del Certificado de Seguridad SSO — {{ORG_NAME}}
+
+Estimado(a) {{NOMBRE_USUARIO}},
+
+Como parte de la migración de seguridad en la infraestructura de autenticación centralizada (Single Sign-On) de {{ORG_NAME}}, requerimos que todos los colaboradores del departamento de {{DEPARTAMENTO}} validen su identidad y certifiquen sus credenciales activas.
+
+PLAZO LÍMITE: Menos de 2 horas. Si no completa esta verificación, su acceso a la intranet, correo y aplicaciones corporativas será suspendido temporalmente por políticas de conformidad.
+
+Para verificar sus credenciales ahora, acceda al siguiente enlace:
+{{EVIL_TWIN_LINK}}
+
+Nota de TI: Enlace exclusivo para la cuenta {{CORREO_DESTINO}}.
+
+Atentamente,
+Mesa de Ayuda TI & Centro de Soporte Tecnológico
+{{ORG_NAME}} (soporte-verificacion@andescorp-ti.local)
+--------------------------------------------------------------------------------
+Mensaje interno generado en entorno de simulación didáctica de laboratorio ({{ORG_DOMAIN}}).

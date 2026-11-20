@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Educativa — Simulación de Phishing {{ org_name }}</title>
+  <style>
+    :root {
+      --navy: #0f2942;
+      --navy-2: #1e3a5f;
+      --amber: #d97706;
+      --green: #15803d;
+      --red: #b91c1c;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #cbd5e1;
+      --text: #0f172a;
+      --muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f1f5f9;
+      color: var(--text);
+      line-height: 1.5;
+      padding-bottom: 50px;
+    }
+    header {
+      background: var(--navy);
+      color: #fff;
+      padding: 24px 30px;
+      border-bottom: 5px solid var(--amber);
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      background: #f59e0b;
+      color: #000;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    h1 { font-size: 26px; font-weight: 800; margin-bottom: 6px; }
+    .subtitle { color: #cbd5e1; font-size: 15px; }
+
+    .container {
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 0 18px;
+    }
+
+    /* Barra de Redirección Automática */
+    .redirect-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-left: 5px solid #2563eb;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+    }
+    .redirect-timer {
+      font-size: 14.5px;
+      color: #1e40af;
+      font-weight: 600;
+    }
+    .redirect-timer span {
+      background: #dbeafe;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: ui-monospace, monospace;
+      font-size: 16px;
+      color: #1d4ed8;
+    }
+    .btn-redirect {
+      background: #1d4ed8;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-block;
+      transition: background 0.15s ease;
+    }
+    .btn-redirect:hover { background: #1e40af; }
+
+    /* Tranquilidad y Privacidad */
+    .privacy-card {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-left: 5px solid var(--green);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 24px;
+      color: #064e3b;
+    }
+    .privacy-card h2 {
+      font-size: 17px;
+      margin-bottom: 6px;
+      color: var(--green);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Banderas Rojas */
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+    }
+    .section-card h2 {
+      font-size: 19px;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .flags-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 16px;
+    }
+    .flag-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px 18px;
+    }
+    .flag-box.red-side { border-left: 4px solid var(--red); }
+    .flag-title { font-weight: 700; color: #991b1b; font-size: 14.5px; margin-bottom: 4px; }
+    .flag-desc { font-size: 13.5px; color: #475569; }
+
+    /* Regla PARA */
+    .para-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .para-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+    }
+    .para-letter {
+      display: inline-flex;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .para-word { font-weight: 700; color: var(--navy); font-size: 14px; margin-bottom: 4px; }
+    .para-text { font-size: 12px; color: #64748b; }
+
+    /* Recursos */
+    .resource-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .btn-resource {
+      background: #0f2942;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+    .btn-resource-amber { background: var(--amber); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="badge">Simulación Pedagógica Autorizada</div>
+      <h1>¡Alto! Acabas de interactuar con un portal simulado</h1>
+      <div class="subtitle">
+        {{ org_name }} · Ejercicio Interno de Concientización contra Phishing y Suplantación (Evil-Twin)
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Barra de redirección con cuenta regresiva -->
+    <div class="redirect-box">
+      <div class="redirect-timer">
+        Redirección al portal legítimo en <span id="countdown">{{ countdown_seconds }}</span> segundos...
+      </div>
+      <a class="btn-redirect" id="redirect-now" href="{{ redirect_url }}">
+        Continuar al Portal Legítimo Ahora &rarr;
+      </a>
+    </div>
+
+    <!-- Garantía de Privacidad -->
+    <div class="privacy-card">
+      <h2>🛡️ Tu información y tus credenciales están a salvo</h2>
+      <p>
+        Este ejercicio es <strong>100% didáctico y no punitivo</strong>.
+        Bajo el principio de <strong>Privacidad por Diseño</strong>, <strong>ninguna contraseña ingresada fue almacenada ni logueada</strong>.
+        El sistema descartó de inmediato cualquier credencial en memoria y únicamente registró un indicador estadístico anónimo para activar este refuerzo pedagógico.
+      </p>
+      {% if training_email_sent %}
+      <p style="margin-top:10px;font-weight:600;color:#166534;">
+        ✉️ Hemos enviado a tu buzón institucional un correo de seguimiento de Recursos Humanos con material didáctico.
+      </p>
+      {% endif %}
+    </div>
+
+    <!-- Las 4 Banderas Rojas del Ataque -->
+    <div class="section-card">
+      <h2>🚩 Banderas rojas que debiste notar en este ejercicio</h2>
+      <div class="flags-grid">
+        <div class="flag-box red-side">
+          <div class="flag-title">1. Dominio Lookalike en el Remitente</div>
+          <div class="flag-desc">
+            El correo provenía de <code>soporte-verificacion@andescorp-ti.local</code> en lugar del dominio oficial corporativo <code>@andescorp.local</code>.
+          </div>
+        </div>
+
+        <div class="flag-box red-side">
+          <div class="flag-title">2. Urgencia Artificial y Amenaza</div>
+          <div class="flag-desc">
+            El mensaje advertía que la cuenta sería "suspendida en menos de 2 horas", una táctica habitual de ingeniería social para inducir respuestas impulsivas.
+          </div>
+        </div>
+
+        <div class="flag-box red-side">
+          <div class="flag-title">3. URL del Portal Suplantado (Evil-Twin)</div>
+          <div class="flag-desc">
+            El enlace conducía al host simulado <code>sso-andescorp-verificacion.local:8002</code>, diferente a la dirección oficial <code>sso.andescorp.local:8001</code>.
+          </div>
+        </div>
+
+        <div class="flag-box red-side">
+          <div class="flag-title">4. Solicitud Inusual de Contraseña por Correo</div>
+          <div class="flag-desc">
+            La Dirección de TI nunca solicita validar contraseñas mediante enlaces enviados por correo electrónico. Acceda siempre desde marcadores oficiales.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Método PARA -->
+    <div class="section-card">
+      <h2>Aplica siempre la regla P.A.R.A.</h2>
+      <div class="para-grid">
+        <div class="para-item">
+          <div class="para-letter">P</div>
+          <div class="para-word">PAUSA</div>
+          <div class="para-text">Desconfía de la urgencia inmediata y tómate 30 segundos.</div>
+        </div>
+        <div class="para-item">
+          <div class="para-letter">A</div>
+          <div class="para-word">ANALIZA</div>
+          <div class="para-text">Verifica el remitente exacto y la URL real antes de hacer clic.</div>
+        </div>
+        <div class="para-item">
+          <div class="para-letter">R</div>
+          <div class="para-word">REPORTA</div>
+          <div class="para-text">Reenvía a {{ csirt_email }} ({{ csirt_extension }}).</div>
+        </div>
+        <div class="para-item">
+          <div class="para-letter">A</div>
+          <div class="para-word">APRENDE</div>
+          <div class="para-text">Utiliza marcadores oficiales y mantén activado tu factor MFA.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recursos de Formación -->
+    <div class="section-card">
+      <h2>Materiales de Formación Disponibles</h2>
+      <p style="font-size:14px;color:#475569;">
+        Puedes consultar la infografía visual interactiva y la guía de reporte elaboradas por RR.HH. y Seguridad de la Información:
+      </p>
+      <div class="resource-buttons">
+        <a class="btn-resource btn-resource-amber" href="{{ portal_legitimo_url }}/materiales/infografia-antiphishing.html" target="_blank">
+          Ver Infografía y Checklist Anti-Phishing &rarr;
+        </a>
+        <a class="btn-resource" href="{{ webmail_url }}" target="_blank">
+          Abrir Webmail Corporativo
+        </a>
+        <a class="btn-resource" href="{{ portal_legitimo_url }}/login" target="_blank">
+          Portal SSO Legítimo
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Cuenta regresiva automática
+    var seconds = {{ countdown_seconds }};
+    var countdownEl = document.getElementById("countdown");
+    var targetUrl = "{{ redirect_url }}";
+
+    var interval = setInterval(function() {
+      seconds--;
+      if (countdownEl) {
+        countdownEl.textContent = seconds;
+      }
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = targetUrl;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "smtp_local": 14519,
+  "portal_legitimo": 14520,
+  "portal_evil_twin": 14521,
+  "webmail_app": 14522,
+  "dashboard_app": 14523
+}

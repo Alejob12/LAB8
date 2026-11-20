@@ -1,0 +1,108 @@
+{
+  "campaign_id": "CAMP-2026-CONCIENTIZACION-SSO-01",
+  "generated_at_utc": "2026-11-20T00:54:41Z",
+  "privacy_guarantees": {
+    "passwords_stored": 0,
+    "cleartext_credentials_logged": false,
+    "sensitive_fields_dropped_count": 4,
+    "pseudonymization": "HMAC-SHA256 (clave efímera por campaña)",
+    "sqlite_secure_delete": true
+  },
+  "summary": {
+    "participants_registered": 8,
+    "emails_sent_unique": 8,
+    "links_clicked_unique": 6,
+    "forms_submitted_unique": 4,
+    "educational_page_viewed_unique": 4,
+    "redirected_to_legit_unique": 4,
+    "training_emails_sent_unique": 4,
+    "click_rate_pct": 75.0,
+    "submission_rate_pct": 50.0,
+    "education_completion_pct": 100.0,
+    "redirection_completion_pct": 100.0
+  },
+  "events_breakdown": {
+    "EMAIL_QUEUED": {
+      "total": 8,
+      "unique_users": 8
+    },
+    "EMAIL_SENT": {
+      "total": 8,
+      "unique_users": 8
+    },
+    "LINK_CLICKED": {
+      "total": 6,
+      "unique_users": 6
+    },
+    "FORM_SUBMITTED": {
+      "total": 4,
+      "unique_users": 4
+    },
+    "TRAINING_EMAIL_QUEUED": {
+      "total": 4,
+      "unique_users": 4
+    },
+    "TRAINING_EMAIL_SENT": {
+      "total": 4,
+      "unique_users": 4
+    },
+    "EDUCATIONAL_VIEWED": {
+      "total": 4,
+      "unique_users": 4
+    },
+    "REDIRECTED_TO_LEGIT": {
+      "total": 4,
+      "unique_users": 4
+    }
+  },
+  "by_department": [
+    {
+      "department": "Comercial",
+      "emails_sent": 1,
+      "clicked": 0,
+      "submitted": 0,
+      "educated": 0,
+      "redirected": 0
+    },
+    {
+      "department": "Finanzas",
+      "emails_sent": 2,
+      "clicked": 1,
+      "submitted": 1,
+      "educated": 1,
+      "redirected": 1
+    },
+    {
+      "department": "Legal y Cumplimiento",
+      "emails_sent": 1,
+      "clicked": 1,
+      "submitted": 1,
+      "educated": 1,
+      "redirected": 1
+    },
+    {
+      "department": "Operaciones",
+      "emails_sent": 2,
+      "clicked": 2,
+      "submitted": 0,
+      "educated": 0,
+      "redirected": 0
+    },
+    {
+      "department": "Recursos Humanos",
+      "emails_sent": 1,
+      "clicked": 1,
+      "submitted": 1,
+      "educated": 1,
+      "redirected": 1
+    },
+    {
+      "department": "Tecnología",
+      "emails_sent": 1,
+      "clicked": 1,
+      "submitted": 1,
+      "educated": 1,
+      "redirected": 1
+    }
+  ]
+}
